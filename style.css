@@ -1,0 +1,45 @@
+body {
+    position : relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    align-content: center;
+    background: #b7e2ef;
+}
+
+h1 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    text-shadow: 2px 2px 3px rgba(105, 107, 108, 0.5);
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    color: #000;
+}
+
+.gameboard {
+    align-content: center;
+    background-color: #6593a5;
+}
+
+td {
+    align-content: center;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    border: 3px solid #b6effd;
+    text-align: center;
+    text-shadow: 2px 2px 3px rgba(105, 107, 108, 0.5);
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: #fff;
+}
+
+html {
+    color: #2b2b2e;
+    font-size: 16px;
+    line-height: 1.4;;
+}
