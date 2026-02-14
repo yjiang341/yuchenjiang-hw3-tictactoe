@@ -21,7 +21,6 @@ const winningCombos = [
 let currentPlayer = 'X'; // default starting player
 let turnPlayer = 0;
 let gameStarted = false;
-let gameReStart = false;
 let gameOver = false;
 
 board.addEventListener('click', (e) => {
@@ -92,7 +91,6 @@ restartBtn.addEventListener("click", () => {
     currentPlayer = "X";
     turnPlayer = 0;
     gameStarted = false;
-    gameReStart = true;
     gameOver = false;
     showMessage("Game Restarted!");
     messageText.innerHTML =
@@ -112,7 +110,7 @@ ruleBtn.addEventListener("click", () => {
 
 /*
   ============================================
-  Message Decoration
+  Message Decoration Function
   ============================================
 */
 function showMessage(msg) {
