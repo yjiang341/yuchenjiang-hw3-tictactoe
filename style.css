@@ -1,6 +1,6 @@
 /*
   ============================================
-  Body Design
+  Page Design
   ============================================
 */
 body {
@@ -13,16 +13,25 @@ body {
     gap: 15px;
     padding-top: 40px;
     align-content: center;
-    background: #b7e2ef;
+    background-image: url('https://images6.alphacoders.com/698/thumb-1920-698444.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+html {
+    color: #2b2b2e;
+    font-size: 16px;
+    line-height: 1.4;;
 }
 
 h1 {
     margin: 0;
     text-align: center;
-    text-shadow: 2px 2px 3px rgba(105, 107, 108, 0.5);
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.3);
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    font-size: 50px;
-    color: #000;
+    font-size: 3vw;
+    color: #ffffff;
     animation: fadeIn 0.8s ease-in-out;
 }
 
@@ -33,19 +42,31 @@ h1 {
     margin: 20px auto;
     padding: 20px;
 
-    background-color: #6593a5;
-    border: 2px solid #adddec;
+    background-color: rgba(131, 129, 129, 0.05);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid #6e6e6e;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.generalText{
+    margin: 0;
+    text-align: center;
+    text-shadow: 2px 2px 3px rgba(105, 107, 108, 0.3);
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #000;
+    animation: fadeIn 0.8s ease-in-out;
 }
 
 #messageText {
     margin: 0;
     text-align: center;
-    text-shadow: 2px 2px 3px rgba(105, 107, 108, 0.5);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    color: #000;
+    font-size: 1.5vw;
+    color: #ffffff;
     animation: fadeIn 0.8s ease-in-out;
 }
 
@@ -60,7 +81,9 @@ h1 {
     max-width: 500px;
     border-collapse: separate;
     border-spacing: 10px;
-    background-color: #6593a5;
+    background-color: rgba(236, 233, 233, 0.05); /* 90% transparency */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 td {
@@ -68,44 +91,75 @@ td {
     width: 150px;
     height: 150px;
     padding: 0;
-    border: 3px solid #ffffff;
+    border: 1px solid #ffffff;
+    background-color: rgba(255, 253, 253, 0.05);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
     text-align: center;
-    text-shadow: 2px 2px 3px rgba(105, 107, 108, 0.5);
+    text-shadow: 2px 2px 3px rgba(193, 197, 197, 0.4);
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    font-size: 30px;
-    color: #fff;
+    font-size: 70px;
+    color: #ffffff;
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 td:hover {
     background-color: rgba(255, 255, 255, 0.15);
-    transform: scale(1.03);
+    transform: scale(1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 td:active {
-    transform: scale(100%);
+    transform: scale(1);
 }
 
-.restart-btn {
-    margin-top: 15px;
+.general-btn {
+    display: inline-block;
+    margin: 15px;
     padding: 10px 24px;
     font-size: 16px;
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-radius: 20px;
     border: none;
-    background-color: #2b2b2e;
+    background-color: rgba(255, 255, 253, 0.05);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
     color: #fff;
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.restart-btn:hover {
-    background-color: #444;
+.general-btn:hover {
+    background-color: #2b90cd;
     transform: translateY(-2px);
 }
 
-.restart-btn:active {
+.general-btn:active {
+    transform: scale(0.95);
+}
+
+.close-btn {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px 24px;
+    font-size: 16px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(32, 32, 32);
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.close-btn:hover {
+    background-color: #757575;
+    transform: translateY(-2px);
+}
+
+.close-btn:active {
     transform: scale(0.95);
 }
 
@@ -138,10 +192,4 @@ td:active {
     to {
         box-shadow: 0 0 20px rgba(255, 217, 102, 0.9);
     }
-}
-
-html {
-    color: #2b2b2e;
-    font-size: 16px;
-    line-height: 1.4;;
 }
