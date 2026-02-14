@@ -1,3 +1,8 @@
+/*
+  ============================================
+  Gaming Logic
+  ============================================
+*/
 const board = document.querySelector(".gameboard");
 const body = document.querySelector("body");
 
@@ -25,6 +30,24 @@ board.addEventListener('click', (e) => {
     }
 });
 
+/*
+  ============================================
+  Bottom Functions
+  ============================================
+*/
 body.addEventListener('click', (e) => {
     e.target.backgroundColor = "white";
 })
+
+const restartBtn = document.querySelector("#restartBtn");
+
+restartBtn.addEventListener("click", () => {
+    const cells = document.querySelectorAll("td");
+
+    cells.forEach(cell => {
+        cell.textContent = "";
+        cell.classList.remove("win");
+    });
+
+    // Reset any game state variables here
+});

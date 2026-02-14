@@ -1,27 +1,65 @@
+/*
+  ============================================
+  Body Design
+  ============================================
+*/
 body {
     position : relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 120vh;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 40px;
     align-content: center;
     background: #b7e2ef;
 }
 
 h1 {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: 0;
     text-align: center;
     text-shadow: 2px 2px 3px rgba(105, 107, 108, 0.5);
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     font-size: 50px;
     color: #000;
+    animation: fadeIn 0.8s ease-in-out;
 }
 
+.uniformContainer {
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    margin: 20px auto;
+    padding: 20px;
+
+    background-color: #6593a5;
+    border: 2px solid #adddec;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#messageText {
+    margin: 0;
+    text-align: center;
+    text-shadow: 2px 2px 3px rgba(105, 107, 108, 0.5);
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #000;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/*
+  ============================================
+  Table & Bottom
+  ============================================
+*/
 .gameboard {
-    align-content: center;
+    display: block;
+    margin: 10px auto;
+    max-width: 500px;
+    border-collapse: separate;
+    border-spacing: 10px;
     background-color: #6593a5;
 }
 
@@ -29,13 +67,77 @@ td {
     align-content: center;
     width: 150px;
     height: 150px;
-    padding: 10px;
-    border: 3px solid #b6effd;
+    padding: 0;
+    border: 3px solid #ffffff;
     text-align: center;
     text-shadow: 2px 2px 3px rgba(105, 107, 108, 0.5);
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     font-size: 30px;
     color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+td:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: scale(1.03);
+}
+
+td:active {
+    transform: scale(100%);
+}
+
+.restart-btn {
+    margin-top: 15px;
+    padding: 10px 24px;
+    font-size: 16px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-radius: 20px;
+    border: none;
+    background-color: #2b2b2e;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.restart-btn:hover {
+    background-color: #444;
+    transform: translateY(-2px);
+}
+
+.restart-btn:active {
+    transform: scale(0.95);
+}
+
+/*
+  ============================================
+  Animations
+  ============================================
+*/
+.win {
+    background-color: #ffd966 !important;
+    color: #2b2b2e;
+    animation: winPulse 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes winPulse {
+    from {
+        box-shadow: 0 0 0 rgba(255, 217, 102, 0.4);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(255, 217, 102, 0.9);
+    }
 }
 
 html {
